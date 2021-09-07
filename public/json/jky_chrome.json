@@ -1,0 +1,47 @@
+{
+    "title": "Chrome disable home and end",
+    "rules": [
+        {
+            "description": "In Chrome, disable home",
+            "manipulators": [
+                {
+                    "from": {
+                        "key_code": "home",
+                        "modifiers": { }
+                    },
+                    "to": [{ "key_code": "vk_none" }],
+                    "type": "basic",
+                    "conditions": [
+                        {
+                            "type": "frontmost_application_if",
+                            "bundle_identifiers": [
+                                "^com\\.google\\.Chrome$"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "description": "In Chrome, disable end",
+            "manipulators": [
+                {
+                    "from": {
+                        "key_code": "end",
+                        "modifiers": { }
+                    },
+                    "to": [{ "key_code": "vk_none" }],
+                    "type": "basic",
+                    "conditions": [
+                        {
+                            "type": "frontmost_application_if",
+                            "bundle_identifiers": [
+                                "^com\\.google\\.Chrome$"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
